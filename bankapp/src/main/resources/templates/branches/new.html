@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create New Branch</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Create New Branch</h1>
+<form action="#" th:action="@{/branches}" th:object="${branch}" method="post">
+    <label for="name">Branch Name:</label>
+    <input type="text" id="name" th:field="*{name}" required>
+    <label for="location">Location:</label>
+    <input type="text" id="location" th:field="*{location}" required>
+    <button type="submit">Create</button>
+</form>
+<a href="/branches">Back to Branch List</a>
+</body>
+</html>

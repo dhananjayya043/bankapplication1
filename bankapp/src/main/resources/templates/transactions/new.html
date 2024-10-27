@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create New Transaction</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Create New Transaction</h1>
+<form action="#" th:action="@{/transactions}" th:object="${transaction}" method="post">
+    <label for="accountNumber">Account Number:</label>
+    <input type="text" id="accountNumber" th:field="*{accountNumber}" required>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" th:field="*{amount}" required>
+    <button type="submit">Create</button>
+</form>
+<a href="/transactions">Back to Transaction List</a>
+</body>
+</html>
